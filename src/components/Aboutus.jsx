@@ -19,6 +19,7 @@ const AboutUs = () => {
       marginBottom: "20px",
     },
     heading2: {
+        
       color: "#a8896c",
       fontSize: "1.6em",
       marginTop: "40px",
