@@ -4,6 +4,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-light shadow-sm mt-1">
       {/* Brand Logo */}
+      
       <Link to="/" className="navbar-brand fw-bold">
         Soluna<span className="text-info">Jewelry</span>
       </Link>
@@ -31,7 +32,7 @@ const Navbar = () => {
           <li className="nav-item">
             <b>
               <Link to="/addjewelry" className="nav-link">
-                Add Jewelry
+                Sell Jewelry
               </Link>
             </b>
           </li>

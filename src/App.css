@@ -93,6 +93,15 @@
 .App-link {
   color: #61dafb;
 }
+nav{
+  padding: 10px;
+  
+}
+.carousel-item {
+  transition: transform 1.5s ease-in-out; /* slows the slide animation */
+}
+
+
 
 @keyframes App-logo-spin {
   from {

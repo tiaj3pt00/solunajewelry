@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import Makepayment from './components/Makepayment';
 import AboutUs from './components/Aboutus';
 
+
 function App() {
   return (
     <Router>
@@ -28,6 +29,8 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/mpesapayment" element={<Makepayment />} />
           <Route path="/*" element={<Notfound />} />
+          
+          
           
         </Routes>
       </div>

@@ -7,10 +7,13 @@ const Addproduct = () => {
   const [productDescription, setproductDescription] = useState("");
   const [productCost, setproductCost] = useState("");
   const [productPhoto, setproductPhoto] = useState("");
+  
 
   const [loading, setLoading] = useState("");
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+  
+
 
   const uploadProduct = async (e) => {
     e.preventDefault();
@@ -29,9 +32,7 @@ const Addproduct = () => {
       );
 
       setLoading("");
-     setSuccess(response.data.message);
-
-
+      setSuccess(response.data.message);
 
       setproductName("");
       setproductDescription("");
@@ -46,19 +47,30 @@ const Addproduct = () => {
   return (
     <div
       className="row justify-content-center mt-4 mb-5"
-      style={{ backgroundColor: "#f8f6f3", padding: "40px 0" }}
+      style={{
+        background: "linear-gradient(to bottom right, #e0f7fa, #f9e7c0)",
+        padding: "60px 0",
+        fontFamily: "'Segoe UI', 'Playfair Display', serif",
+        minHeight: "100vh",
+      }}
     >
       <div
-        className="col-md-7 card shadow-lg p-4"
+        className="col-md-7 card shadow-lg p-5"
         style={{
           border: "none",
-          borderRadius: "12px",
-          backgroundColor: "#ffffff",
+          borderRadius: "18px",
+          backgroundColor: "#ffffffee",
+          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
         }}
       >
         <h3
           className="text-center mb-4"
-          style={{ fontWeight: "600", color: "#8e6f5e" }}
+          style={{
+            fontWeight: "700",
+            color: "#a57c00",
+            fontSize: "30px",
+            letterSpacing: "1px",
+          }}
         >
           Add a New Jewel to Your Collection
         </h3>
@@ -77,7 +89,12 @@ const Addproduct = () => {
             onChange={(e) => setproductName(e.target.value)}
             placeholder="Product Name"
             className="form-control mb-3"
-            style={{ borderRadius: "8px", borderColor: "#d1c4b3" }}
+            style={{
+              borderRadius: "12px",
+              border: "1px solid #d8b867",
+              fontSize: "16px",
+              padding: "12px",
+            }}
           />
 
           <textarea
@@ -86,7 +103,13 @@ const Addproduct = () => {
             onChange={(e) => setproductDescription(e.target.value)}
             placeholder="Product Description"
             className="form-control mb-3"
-            style={{ borderRadius: "8px", borderColor: "#d1c4b3" }}
+            rows={4}
+            style={{
+              borderRadius: "12px",
+              border: "1px solid #d8b867",
+              fontSize: "16px",
+              padding: "12px",
+            }}
           ></textarea>
 
           <input
@@ -96,12 +119,21 @@ const Addproduct = () => {
             onChange={(e) => setproductCost(e.target.value)}
             placeholder="Product Price"
             className="form-control mb-3"
-            style={{ borderRadius: "8px", borderColor: "#d1c4b3" }}
+            style={{
+              borderRadius: "12px",
+              border: "1px solid #d8b867",
+              fontSize: "16px",
+              padding: "12px",
+            }}
           />
 
           <label
             className="form-label"
-            style={{ fontWeight: "500", color: "#6e5849" }}
+            style={{
+              fontWeight: "600",
+              color: "#6e5b38",
+              fontSize: "15px",
+            }}
           >
             Upload Product Image
           </label>
@@ -110,24 +142,33 @@ const Addproduct = () => {
             className="form-control mb-4"
             accept="image/*"
             onChange={(e) => setproductPhoto(e.target.files[0])}
-            style={{ borderRadius: "8px", borderColor: "#d1c4b3" }}
+            style={{
+              borderRadius: "12px",
+              border: "1px solid #d8b867",
+              padding: "10px",
+            }}
           />
 
           <div className="text-center">
             <input
               type="submit"
               value="Add Product"
-              className="btn btn-outline-dark px-4 py-2"
+              className="btn px-5 py-2"
               style={{
-                backgroundColor: "#8e6f5e",
+                backgroundColor: "#d4af37",
                 color: "#fff",
-                fontWeight: "500",
-                borderRadius: "10px",
+                fontWeight: "600",
+                fontSize: "16px",
+                borderRadius: "14px",
                 border: "none",
+                transition: "all 0.3s ease",
               }}
+              onMouseOver={(e) => (e.target.style.backgroundColor = "#b99824")}
+              onMouseOut={(e) => (e.target.style.backgroundColor = "#d4af37")}
             />
           </div>
         </form>
+        
       </div>
 
       <Footer />
