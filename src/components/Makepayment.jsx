@@ -13,7 +13,7 @@ const Makepayment = () => {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
-  //Implement the function that will handle the pay now activity
+  // Implement the function that will handle the pay now activity
   const payNow = async (e) => {
     //PRevent the site from reloading
     e.preventDefault();
