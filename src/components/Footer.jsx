@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
       </section>
       <footer className="text-white text-center p-2 mt-2 bootom-footer">
-        <h5>Developed by Tia Jeptoo &copy; 2025.All rights reserved</h5>
+        <h5>Developed by Tia Jeptoo. &copy; 2025.All rights reserved</h5>
       </footer>
     </div>
   );
